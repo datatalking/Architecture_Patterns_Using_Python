@@ -125,7 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1738619158490</updated>
       <workItem from="1738619159782" duration="1127000" />
-      <workItem from="1738620341080" duration="462000" />
+      <workItem from="1738620341080" duration="767000" />
     </task>
     <task id="LOCAL-00001" summary="abstracted first version out now its easier at a higher level">
       <option name="closed" value="true" />
@@ -135,7 +135,31 @@
       <option name="project" value="LOCAL" />
       <updated>1738620631480</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="moving to urllib2 in python 3.10+">
+      <option name="closed" value="true" />
+      <created>1738620823486</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738620823486</updated>
+    </task>
+    <task id="LOCAL-00003" summary="moving to urllib2 in python 3.10+">
+      <option name="closed" value="true" />
+      <created>1738621013176</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738621013176</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated requirements.txt">
+      <option name="closed" value="true" />
+      <created>1738621031586</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738621031586</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,9 +167,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="abstracted first version out now its easier at a higher level" />
-    <option name="LAST_COMMIT_MESSAGE" value="abstracted first version out now its easier at a higher level" />
+    <MESSAGE value="moving to urllib2 in python 3.10+" />
+    <MESSAGE value="updated requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated requirements.txt" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Architecture_Patterns_with_Python$first_pyt__1_.coverage" NAME="first.pyt (1) Coverage Results" MODIFIED="1738620738503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Architecture_Patterns_Using_Python" />
     <SUITE FILE_PATH="coverage/Architecture_Patterns_with_Python$first_pyt.coverage" NAME="first.pyt Coverage Results" MODIFIED="1738619630292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
