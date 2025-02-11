@@ -47,7 +47,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.editor",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -186,7 +186,7 @@
       <workItem from="1739052443129" duration="4563000" />
       <workItem from="1739133389178" duration="219000" />
       <workItem from="1739135287728" duration="4112000" />
-      <workItem from="1739300822816" duration="2750000" />
+      <workItem from="1739300822816" duration="3544000" />
     </task>
     <task id="LOCAL-00001" summary="abstracted first version out now its easier at a higher level">
       <option name="closed" value="true" />
@@ -252,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739314937539</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updated test_batches.py">
+      <option name="closed" value="true" />
+      <created>1739315701713</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1739315701713</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
