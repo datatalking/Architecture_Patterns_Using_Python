@@ -1,0 +1,5 @@
+stuff and things and words
+
+[plantuml, apwp_0102]
+@startuml Allocation Context Diagram
+!include images/

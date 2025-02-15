@@ -1,0 +1,7 @@
+Brotli
+certifi
+charset-normalizer
+idna
+PySocks
+requests
+urllib3
