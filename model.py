@@ -1,6 +1,7 @@
 #
 import dataclasses
 import typing
+from typing import List
 from datetime import date
 
 
@@ -61,6 +62,12 @@ class Batch:
 
 
 def allocate(line: OrderLine, batches: List[Batch]) -> str:
+	"""
+	
+	:param line:
+	:param batches:
+	:return:
+	"""
 	batch = next(b for b in sorted(batches)
 	             if b.can_allocate(line))
 	batch.allocate(line)

@@ -5,3 +5,6 @@ idna
 PySocks
 requests
 urllib3
+typing
+pytest~=7.4.4
+sqlalchemy~=2.0.34
