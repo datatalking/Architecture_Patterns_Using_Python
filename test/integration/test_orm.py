@@ -59,3 +59,12 @@ def test_saving_batches(session):
     rows = list(session.execute('SELECT orderline_id, batch_id FROM "allocations"'))
     assert rows == [(line.id, batch.id)
 
+
+def test_retrieving_allocations(session):
+    session.execute(
+        'INSERT INTO order_lines (orderid, sku, qty) VALUES ("order1", "sku1", 12)'
+    )
+    [[olid]] = session.execute("SELECT id FROM order_lines WHERE orderid=:orderid AND sku=:sku",
+                               dict(order_id="order1", sku="sku1"),
+                               )
+    sessions.execute
