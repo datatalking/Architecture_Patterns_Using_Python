@@ -1,5 +1,5 @@
 # test_allocate.py
-from model import Batch, OrderLine
+from domain.model import Batch, OrderLine
 import pytest
 
 

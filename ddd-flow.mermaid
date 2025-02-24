@@ -1,0 +1,53 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '16px', 'fontFamily': 'arial', 'lineWidth': '2px' }}}%%
+
+flowchart TD
+    subgraph E2E["E2E Tests (The Friendship Agreement)"]
+        direction TB
+        E1[HTTP Client] -->|Calls| E2{Has Auth Token?}
+        E2 -->|Yes| E3{Valid Session?}
+        E2 -->|No| E4[Return 401]
+        E3 -->|No| E4
+        E3 -->|Yes| E5[Process Request]
+    end
+
+    subgraph Integration["Integration Tests (The Social Contract)"]
+        direction TB
+        I1[Service A] -->|Validates| I2{"Has Required\nDomain Events?"}
+        I2 -->|Yes| I3{"Dependencies\nResponding?"}
+        I2 -->|No| I4[Raise Domain\nException]
+        I3 -->|No| I5[Circuit Break]
+        I3 -->|Yes| I6[Execute Flow]
+    end
+
+    subgraph Unit["Unit Tests (The Individual Clauses)"]
+        direction TB
+        U1[Domain Model] -->|Checks| U2{"Valid State\nTransition?"}
+        U2 -->|Yes| U3{"Business Rules\nSatisfied?"}
+        U2 -->|No| U4[Raise Invalid\nState Exception]
+        U3 -->|No| U5[Raise Business\nRule Exception]
+        U3 -->|Yes| U6[Apply Event]
+    end
+
+    subgraph Services["Service Layer (The Social Protocol)"]
+        direction TB
+        S1[API Gateway] -->|Routes to| S2{Service Available?}
+        S2 -->|Yes| S3{"Required\nCapabilities?"}
+        S2 -->|No| S4[Return 503]
+        S3 -->|No| S5[Return 400]
+        S3 -->|Yes| S6[Process]
+    end
+
+    E2 -.->|Depends on| S2
+    S3 -.->|Validates via| I2
+    I6 -.->|Uses| U1
+
+    style E2E fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
+    style Integration fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
+    style Unit fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+    style Services fill:#fff3e0,stroke:#ff9800,stroke-width:2px
+
+    classDef condition fill:#ffffff,stroke:#424242,stroke-width:2px
+    class E2,E3,I2,I3,U2,U3,S2,S3 condition
+
+    classDef action fill:#ffffff,stroke:#757575,stroke-width:1px
+    class E1,E4,E5,I1,I4,I5,I6,U1,U4,U5,U6,S1,S4,S5,S6 action

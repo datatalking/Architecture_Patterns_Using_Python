@@ -1,8 +1,7 @@
-from sqlalchemy.orm import mapper, relationship
-from sqlalchemy import mapper, relationship, MetaData
+from sqlalchemy.orm import mapper
+from sqlalchemy import mapper, MetaData
 
-
-import model
+from domain import model
 
 metadata = MetaData()
 

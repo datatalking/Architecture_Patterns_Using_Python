@@ -1,0 +1,52 @@
+flowchart TD
+    Start([Feature Request]) --> A{Is it a bug?}
+    A -->|Yes| B[Emergency Protocol]
+    A -->|No| C[Requirements Analysis]
+    
+    B --> D{Can reproduce locally?}
+    D -->|No| E[Add E2E Test to Reproduce]
+    D -->|Yes| F[Write Failing Unit Test]
+    
+    C --> G{Domain Expert Available?}
+    G -->|No| H[Consult Ubiquitous Language Dictionary]
+    G -->|Yes| I[Domain Expert Interview]
+    
+    H --> J[Define Domain Model]
+    I --> J
+    
+    J --> K{Complex Business Logic?}
+    K -->|Yes| L[TDD Domain Layer]
+    K -->|No| M[Mock Dependencies]
+    
+    L --> N[Unit Test Domain Model]
+    M --> O[Integration Test Setup]
+    
+    N --> P{All Edge Cases Covered?}
+    P -->|No| Q[Add Property-Based Tests]
+    P -->|Yes| R[Implementation]
+    
+    O --> S[Test Service Layer]
+    S --> T{External Dependencies?}
+    T -->|Yes| U[Mock External Services]
+    T -->|No| V[Test Repository Layer]
+    
+    Q --> R
+    R --> W[E2E Test Suite]
+    U --> W
+    V --> W
+    
+    E --> X{Test Passes?}
+    W --> X
+    
+    X -->|No| Y[Debug With Domain Expert]
+    X -->|Yes| Z[Deploy to Staging]
+    
+    Y --> A
+    Z --> End([Production Deploy])
+    
+    style Start fill:#abf,stroke:#333,stroke-width:4px
+    style End fill:#f9f,stroke:#333,stroke-width:4px
+    style A fill:#bbf,stroke:#333,stroke-width:2px
+    style K fill:#bbf,stroke:#333,stroke-width:2px
+    style T fill:#bbf,stroke:#333,stroke-width:2px
+    style X fill:#bbf,stroke:#333,stroke-width:2px
