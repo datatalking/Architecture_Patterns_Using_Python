@@ -6,5 +6,12 @@ PySocks
 requests
 urllib3
 typing
-pytest~=7.4.4
-sqlalchemy~=2.0.34
+pytest
+sqlalchemy
+krb5
+# libedit
+# libpq
+psycopg2
+# python_abi
+# podman
+docker

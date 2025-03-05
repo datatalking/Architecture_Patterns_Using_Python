@@ -2,6 +2,7 @@ from datetime import datetime
 from flask import Flask, request
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+import psycopg2
 
 import config
 from domain import model
@@ -29,3 +30,21 @@ def add_batch():
 		session,
 	)
 	return "OK", 201
+
+
+@app.route("/allocate", methods=["POST"])
+def allocate_endpoint():
+	session = get_session()
+	repo = repository.SqlAlchemyRepository(session)
+	try:
+		batchref = services.allocate(
+			request.join["orderid"],
+			request.join["sku"],
+			request.join["qty"],
+			repo,
+			session,
+		)
+	except (model.OutOfStock, services.InvalidSku) as e:
+	        return {"message": str(e)}, 400
+
+	return {"batchref": batchref}, 201

@@ -18,7 +18,7 @@ def allocate(line: OrderLine, batches: List[Batch]) -> str:
 
 
 # an immutable dataclass with no behavior
-@dataclasses.dataclass(unsafe_hash=True)
+@dataclass(unsafe_hash=True)
 class OrderLine:
 	orderid: str
 	sku:str
